@@ -27,7 +27,7 @@ for i in range(len(tablePrice)):
 scrapedfinalPrise = pd.DataFrame(finalPrices)
 scrapedfinalPrise.insert(0, 'id', range(0, 0 + len(scrapedfinalPrise)))
 scrapedfinalPrise.to_csv('scrapedfinalPrise.csv', index=False)
-print("Done")
+print("Saved CSV")
 driver.get("https://www.nseindia.com/")
 niftyBank = driver.find_element(By.ID, "tabList_NIFTYBANK").click()
 scrollTo = driver.find_element(By.CSS_SELECTOR, "body > div.main > div.mid_body.pt-1 > section.corporate_section.common-tabs.tabs-slider.slider-with-dots > div > div > div > nav > div > div")
